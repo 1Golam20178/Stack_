@@ -1,0 +1,94 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define n 3
+int top=-1;
+ int a[n];
+void push(int x)
+{
+    if(top>n-1)
+    {
+        cout<<"stack is overflow"<<endl;
+    }
+    else {
+
+        top++;
+        a[top]=x;
+        cout<<a[top]<<endl;
+    }
+}
+
+void pop()
+{
+    if(top==-1)
+    {
+        cout<<"stack is underflow"<<endl;
+    }
+    else {
+
+        top--;
+         if(top==-1)
+    {
+        cout<<"After pop top is empty"<<endl;
+    }
+    else
+        cout<<"After pop top is :"<<a[top]<<endl;
+    }
+}
+
+void Top()
+{
+    if(top==-1)
+    {
+        cout<<"Top is empty"<<endl;
+    }
+    else
+    cout<<"Top in stack :"<<a[top]<<endl;
+}
+
+void write()
+{
+    if(top==-1)
+    {
+        cout<<"stack is empty"<<endl;
+    }
+    else
+    {
+        cout<<"All element in stack print :";
+        for(int i=0;i<=top;i++)
+        {
+            cout<<a[i];
+        }
+        cout<<endl;
+    }
+}
+void isempty()
+{
+    if(top==-1)
+    {
+        cout<<"IS EMPTY True"<<endl;
+    }
+    else
+        cout<<"IS EMPTY False"<<endl;
+}
+
+
+
+
+int main()
+{
+push(3);
+push(4);
+push(5);
+isempty();
+write();
+Top();
+pop();
+pop();
+pop();
+pop();
+isempty();
+
+
+
+return 0;
+}
